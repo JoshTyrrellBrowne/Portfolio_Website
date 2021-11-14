@@ -10,6 +10,9 @@ section {
 footer {
     height: 500px;
     background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px;
 }
 
 nav {
@@ -23,6 +26,10 @@ ul {
     width: 500px;
     justify-content: space-around;
     font-size: 30px;
+}
+
+ul.show {
+    display: block;
 }
 
 li {
@@ -113,6 +120,11 @@ p {
     padding: 80px;
 }
 
+.subtext {
+    padding: 5px;
+    font-size: 15px;
+}
+
 .headshot {
     width: 300px;
 }
@@ -125,10 +137,79 @@ p {
 .project-card {
     width: 300px;
     height: 500px;
-    border: 1px solid black;
+    box-shadow: 5px 5px 20px rgb(194, 194, 194);
+    padding: 5px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px){
+    .project-container{
+        display: flex;  
+        flex-wrap: wrap;
+    }
+}
+
+.project-image {
+    margin-top: 25px;
+    width: 250px;
+    border-radius: 152px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #ef744b;
+}
+
+hr {
+    margin-left: 20px;
+    margin-right : 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburger:focus {
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
+    }
+
+    ul {
+        display: none;
+        background-color: #2b2c38;
+        margin: 0px;
+    }
+
+    ul.show {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #2b2c38;
+    }
+
+    .logo {
+        display: none;
+    }
 }

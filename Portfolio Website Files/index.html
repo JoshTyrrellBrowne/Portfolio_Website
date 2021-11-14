@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/8dde54f175.js" crossorigin="anonymous"></script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -16,18 +17,21 @@
     <section class="hero"> 
         <nav>
             <img class="logo" src="src/images/JoshLogo.png" alt="Josh Browne's Logo" />
-            <ul>
-                <li>About me</li>
-                <li>Projects</li>
-                <li>Contact me</li>
+            <ul id="nav-list">
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact-me">Contact me</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
 
         <div class="hero-area">
             <div class="hero-text">
                 <h1>Josh Browne</h1>
                 <p>Software Developer</p>
-                <div class="button">About me</div>
+                <div class="button"><a href="#about-me">About me</a></div>
             </div>
             <div class="socials">
                 <div><a class="social" href="https://github.com">
@@ -44,7 +48,7 @@
 
     </section>
 
-    <section class="sub-section">
+    <section class="sub-section" id="about-me">
         <div class="information">
             <h2>About Me</h2>
             <p>Hello, My name is Josh Browne. I am a software developer.</p>
@@ -54,18 +58,45 @@
         </div>
     </section>
 
-    <section class="sub-section-projects">
+    <section class="sub-section-projects" id="projects">
         <h2>Projects</h2>
         <div class="project-container">
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
+            <div class="project-card">
+                <img src=""  alt="Project One Image" class="project-image">
+                <h3>Project One</h3>
+                <p class="subtext">This is my project and some text about it. I really enjoyed making it and will now continue to explain how i made it and what technology i used.....</p>
+                <hr/>
+                <p class="subtext"><a class="project-link" href="https://github.com">View Here</a></p>
+            </div>
+            <div class="project-card">
+                <img src=""  alt="Project Two Image" class="project-image">
+                <h3>Project One</h3>
+                <p class="subtext">This is my project and some text about it. I really enjoyed making it and will now continue to explain how i made it and what technology i used.....</p>
+                <hr/>
+                <p class="subtext"><a class="project-link" href="https://github.com">View Here</a></p>
+            </div>
+            <div class="project-card">
+                <img src=""  alt="Project Three Image" class="project-image">
+                <h3>Project One</h3>
+                <p class="subtext">This is my project and some text about it. I really enjoyed making it and will now continue to explain how i made it and what technology i used.....</p>
+                <hr/>
+                <p class="subtext"><a class="project-link" href="https://github.com">View Here</a></p>
+            </div>
+            <div class="project-card">
+                <img src=""  alt="Project Four Image" class="project-image">
+                <h3>Project One</h3>
+                <p class="subtext">This is my project and some text about it. I really enjoyed making it and will now continue to explain how i made it and what technology i used.....</p>
+                <hr/>
+                <p class="subtext"><a class="project-link" href="https://github.com">View Here</a></p>
+            </div>
         </div>
 
 
     </section>
-    <footer></footer>
+    <footer id="contact-me">
+        <h2>Contact me</h2>
+        <p>joshbrownedev@gmail.com</p>
+    </footer>
 
 
     <script src="src/app.js"></script>
