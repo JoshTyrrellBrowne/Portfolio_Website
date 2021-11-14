@@ -3,16 +3,8 @@ body {
 }
 
 section {
-    height: 500px;
     background-color: white;
     border: solid black 1px;
-}
-
-.hero {
-    background-color: #1c1d25;
-    height: 100vh;
-    color: white;
-    font-size: 40px;
 }
 
 footer {
@@ -44,10 +36,21 @@ h1 {
     margin: 0px;
 }
 
+h2 {
+    font-size: 50px;
+}
+
 p {
     margin: 0px;
     font-size: 30px;
     font-weight: 300;
+}
+
+.hero {
+    background-color: #1c1d25;
+    height: 100vh;
+    color: white;
+    font-size: 40px;
 }
 
 .hero-area {
@@ -88,7 +91,44 @@ p {
     padding-bottom: 200px;
 }
 
+.social {
+    margin: 20px;
+}
+
 .logo {
     height: 100px;
     margin: 20px;
+}
+
+.sub-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.sub-section-projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
+
+.headshot {
+    width: 300px;
+}
+
+.headshot-container {
+    display: flex;
+    align-items: center;
+}
+
+.project-card {
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-around;
 }
