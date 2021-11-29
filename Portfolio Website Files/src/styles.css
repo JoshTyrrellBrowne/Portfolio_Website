@@ -1,5 +1,6 @@
 body {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 section {
@@ -212,4 +213,36 @@ a {
     .logo {
         display: none;
     }
+
+    .my-path {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+.animationCanvas {
+    position:fixed;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.animatedText-CSS {
+    color: rgb(70, 156, 255);
+    position: absolute;
+}
+
+.animatedText-HTML {
+    color: rgb(224, 103, 47);
+    position: absolute;
+}
+
+.animatedText-JS {
+    color: rgb(224, 206, 47);
+    position: absolute;
 }

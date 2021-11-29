@@ -10,10 +10,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/8dde54f175.js" crossorigin="anonymous"></script>
-    <title>Portfolio</title>
+    <title position>Portfolio</title>
 </head>
-<body>
+
+<body id="body">
     
+    <!-- <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="1200px" height="600px" 
+        viewbox="0 0 1200 600"
+        version="1.1"
+        class="my-path">
+        <rect width="146" height="12" fill="#E5E5E5" />
+        <text class="cssText" fill="blue">CSS
+            <animateMotion dur="10s" repeatCount="indefinite" 
+            path="M400,50 L300, 300 z"/>
+        </text>
+        
+        <path fill="none" stroke="lightgrey"
+        d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+    
+    </svg> -->
+
+    <script>
+        // declare variables
+        const FPS = 30;
+        var textSize = 100;
+        var xCSS, yCSS;
+        var xVel, yVel;
+        var bodyObj;// = document.getElementById('body');
+        var textObj;// = document.getElementById('animatedText-CSS');
+
+        var textOjID_css = 'animatedText-CSS'
+        var textOjID_html = 'animatedText-HTML'
+
+        // set up interval (game loop)
+        //setInterval(update.bind(null, textOjID_css), 1000 / FPS);
+        setInterval(update.bind(null, textOjID_html), 1000 / FPS);
+
+        // starting position
+        x = 0;//bodyObj.style.width / 2;
+        y = 0;//bodyObj.style.height / 2;
+
+        // random starting speed (between 25 and 100 pps)
+        xVel = Math.floor(Math.random() * 76 + 25) / FPS;
+        yVel = Math.floor(Math.random() * 76 + 25) / FPS;
+
+        // random direction
+        if (Math.floor(Math.random() * 2) == 0) {
+            xVel = -xVel;
+        }
+        if (Math.floor(Math.random() * 2) == 0) {
+            yVel = -yVel;
+        }
+
+        // update function
+        function update(textObjID) {
+            textObj = document.getElementById(textObjID);
+            bodyObj = document.getElementById('body');
+
+            // move position
+            x += xVel;
+            y += yVel;
+
+            // bounce off screen edge
+            if (x < 0 && xVel < 0) {
+                xVel = -xVel;
+            }
+            if (x > bodyObj.clientWidth && xVel > 0) {
+                xVel = -xVel
+            }
+            if (y  < 0 && yVel < 0) {
+                yVel = -yVel;
+            }
+            if (y  > bodyObj.clientHeight && yVel > 0) {
+                yVel = -yVel
+            }
+
+            textObj.style.left = x.toString() + "px";
+            textObj.style.top = y.toString() + "px";
+        }
+
+
+
+    </script>
+
     <section class="hero"> 
         <nav>
             <img class="logo" src="src/images/JoshLogo.png" alt="Josh Browne's Logo" />
@@ -26,6 +107,10 @@
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
+
+        <strong id="animatedText-CSS" class="animatedText-CSS">CSS</strong>
+        <strong id="animatedText-HTML" class="animatedText-HTML">HTML</strong>
+        <strong id="animatedText-JS" class="animatedText-JS">JS</strong>
 
         <div class="hero-area">
             <div class="hero-text">
@@ -100,5 +185,6 @@
 
 
     <script src="src/app.js"></script>
+</canvas>
 </body>
 </html>

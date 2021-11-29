@@ -6,3 +6,4 @@ function toggleButton() {
 }
 
 hamburgerButton.addEventListener('click', toggleButton)
+
