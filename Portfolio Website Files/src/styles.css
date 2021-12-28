@@ -232,17 +232,25 @@ a {
     position: absolute;
 }
 
+.animation-anchor {
+    
+}
+
 .animatedText-CSS {
     color: rgb(70, 156, 255);
-    position: absolute;
+    position: fixed;
+    opacity: 20%;
 }
 
 .animatedText-HTML {
     color: rgb(224, 103, 47);
-    position: absolute;
+    position: fixed;
+    /*position: absolute;*/
+    opacity: 20%;
 }
 
 .animatedText-JS {
     color: rgb(224, 206, 47);
-    position: absolute;
+    position: fixed;
+    opacity: 20%;
 }

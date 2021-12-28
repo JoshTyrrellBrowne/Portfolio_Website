@@ -32,69 +32,6 @@
     
     </svg> -->
 
-    <script>
-        // declare variables
-        const FPS = 30;
-        var textSize = 100;
-        var xCSS, yCSS;
-        var xVel, yVel;
-        var bodyObj;// = document.getElementById('body');
-        var textObj;// = document.getElementById('animatedText-CSS');
-
-        var textOjID_css = 'animatedText-CSS'
-        var textOjID_html = 'animatedText-HTML'
-
-        // set up interval (game loop)
-        //setInterval(update.bind(null, textOjID_css), 1000 / FPS);
-        setInterval(update.bind(null, textOjID_html), 1000 / FPS);
-
-        // starting position
-        x = 0;//bodyObj.style.width / 2;
-        y = 0;//bodyObj.style.height / 2;
-
-        // random starting speed (between 25 and 100 pps)
-        xVel = Math.floor(Math.random() * 76 + 25) / FPS;
-        yVel = Math.floor(Math.random() * 76 + 25) / FPS;
-
-        // random direction
-        if (Math.floor(Math.random() * 2) == 0) {
-            xVel = -xVel;
-        }
-        if (Math.floor(Math.random() * 2) == 0) {
-            yVel = -yVel;
-        }
-
-        // update function
-        function update(textObjID) {
-            textObj = document.getElementById(textObjID);
-            bodyObj = document.getElementById('body');
-
-            // move position
-            x += xVel;
-            y += yVel;
-
-            // bounce off screen edge
-            if (x < 0 && xVel < 0) {
-                xVel = -xVel;
-            }
-            if (x > bodyObj.clientWidth && xVel > 0) {
-                xVel = -xVel
-            }
-            if (y  < 0 && yVel < 0) {
-                yVel = -yVel;
-            }
-            if (y  > bodyObj.clientHeight && yVel > 0) {
-                yVel = -yVel
-            }
-
-            textObj.style.left = x.toString() + "px";
-            textObj.style.top = y.toString() + "px";
-        }
-
-
-
-    </script>
-
     <section class="hero"> 
         <nav>
             <img class="logo" src="src/images/JoshLogo.png" alt="Josh Browne's Logo" />
@@ -107,10 +44,12 @@
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
-
-        <strong id="animatedText-CSS" class="animatedText-CSS">CSS</strong>
-        <strong id="animatedText-HTML" class="animatedText-HTML">HTML</strong>
-        <strong id="animatedText-JS" class="animatedText-JS">JS</strong>
+        
+        <div id="animation-anchor" class="animation-anchor">
+            <strong id="animatedText-CSS" class="animatedText-CSS">CSS</strong>
+            <strong id="animatedText-HTML" class="animatedText-HTML">HTML</strong>
+            <strong id="animatedText-JS" class="animatedText-JS">JS</strong>
+        </div>
 
         <div class="hero-area">
             <div class="hero-text">
