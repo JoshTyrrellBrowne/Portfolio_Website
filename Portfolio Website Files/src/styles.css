@@ -20,6 +20,10 @@ nav {
     justify-content: space-between;
 }
 
+ol {
+    font-size: 14px;
+}
+
 ul {
     display: flex;
     list-style-type: none;
