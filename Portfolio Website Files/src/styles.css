@@ -21,7 +21,17 @@ nav {
 }
 
 ol {
-    font-size: 14px;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: start;
+    list-style-position: outside;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.project_tech_used_ol {
+    font-size: 10px;
+    font-weight: 300;
 }
 
 ul {
@@ -139,14 +149,16 @@ p {
 }
 
 .project-card {
-    width: 300px;
-    height: 500px;
+    width: 500px;
+    height: 815px;
     box-shadow: 5px 5px 20px rgb(194, 194, 194);
     padding: 5px;
+    margin: 10px;
 }
 
 .project-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -159,8 +171,12 @@ p {
 
 .project-image {
     margin-top: 25px;
-    width: 250px;
-    border-radius: 152px;
+    width: 350px;
+    height: 350px;
+    border-width: 10px;
+    border-color: #ef744b;
+    border-style: inset;
+    /* border-radius: 152px; */
 }
 
 .project-link {
