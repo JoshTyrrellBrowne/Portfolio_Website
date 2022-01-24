@@ -90,7 +90,7 @@ p {
     width: 200px;
     height: 55px;
     border-radius: 25px;
-    background-color: coral;
+    background-color: #2596be;
     text-align: center;
     font-size: 30px;
     font-weight: 300;
@@ -100,7 +100,7 @@ p {
 }
 
 .button:hover {
-    background-color: #ef744b;
+    background-color: #145369;
 }
 
 .button.button:active {
@@ -117,7 +117,7 @@ p {
 }
 
 .logo {
-    height: 100px;
+    height: 140px;
     margin: 20px;
 }
 
@@ -151,7 +151,7 @@ p {
 .project-card {
     width: 500px;
     height: 815px;
-    box-shadow: 5px 5px 20px rgb(194, 194, 194);
+    box-shadow: 5px 5px 20px #2596be;
     padding: 5px;
     margin: 10px;
 }
@@ -174,14 +174,14 @@ p {
     width: 350px;
     height: 350px;
     border-width: 10px;
-    border-color: #ef744b;
+    border-color: #2596be;
     border-style: inset;
     /* border-radius: 152px; */
 }
 
 .project-link {
     text-decoration: none;
-    color: #ef744b;
+    color: #be4d25;
 }
 
 hr {
