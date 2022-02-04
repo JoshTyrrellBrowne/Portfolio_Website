@@ -1,6 +1,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+<<<<<<< HEAD
+=======
+    padding: 0;
+>>>>>>> 886e5847cf0f0eb5856b58fe78246cc0ac9c6759
 }
 
 section {
@@ -9,7 +13,7 @@ section {
 }
 
 footer {
-    height: 500px;
+    height: 300px;
     background-color: black;
     color: white;
     text-align: center;
@@ -19,6 +23,20 @@ footer {
 nav {
     display: flex;
     justify-content: space-between;
+}
+
+ol {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: start;
+    list-style-position: outside;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.project_tech_used_ol {
+    font-size: 10px;
+    font-weight: 300;
 }
 
 ul {
@@ -77,7 +95,7 @@ p {
     width: 200px;
     height: 55px;
     border-radius: 25px;
-    background-color: coral;
+    background-color: #2596be;
     text-align: center;
     font-size: 30px;
     font-weight: 300;
@@ -87,7 +105,7 @@ p {
 }
 
 .button:hover {
-    background-color: #ef744b;
+    background-color: #145369;
 }
 
 .button.button:active {
@@ -104,7 +122,7 @@ p {
 }
 
 .logo {
-    height: 100px;
+    height: 140px;
     margin: 20px;
 }
 
@@ -136,14 +154,23 @@ p {
 }
 
 .project-card {
-    width: 300px;
-    height: 500px;
-    box-shadow: 5px 5px 20px rgb(194, 194, 194);
-    padding: 5px;
+    width: 550px;
+    box-shadow: 5px 5px 20px #2596be;
+    background-color: #dedede;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 15px;
+    transition: all .7s ease-out;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    transition: all .7s ease-in-out;
 }
 
 .project-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -156,13 +183,25 @@ p {
 
 .project-image {
     margin-top: 25px;
-    width: 250px;
-    border-radius: 152px;
+    width: 350px;
+    height: 350px;
+    border-width: 10px;
+    border-color: #2596be;
+    border-style: inset;
+    border-radius: 15px;
+    /* border-radius: 152px; */
+}
+
+.project-description-subtext {
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
 }
 
 .project-link {
     text-decoration: none;
-    color: #ef744b;
+    color: #2596be;
+    display: block;
 }
 
 hr {
