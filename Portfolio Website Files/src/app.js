@@ -7,7 +7,6 @@ function toggleButton() {
 
 hamburgerButton.addEventListener('click', toggleButton)
 
-
 // function to set randomised velocities for the animated text objects
 function setVelocity(object) {
     // random starting speed (between 25 and 100 pps)
@@ -23,14 +22,19 @@ function setVelocity(object) {
     }
 }
 
+// initialise the passed objects position to a position off screen
+function initPosition(object) {
+    x = window.innerWidth / 2;
+    y = window.innerHeight / 2;
+    object.webElement.style.left = x.toString() + "px";
+    object.webElement.style.top = y.toString() + "px";
+}
+
 // declare variables
 const FPS = 30;
 var textSize = 100;
-var bodyObj = document.getElementById('body');
-var textObj;// = document.getElementById('animatedText-CSS');
-var textOjID_css = 'animatedText-CSS'
-var textOjID_html = 'animatedText-HTML'
-
+var bodyObjWebEl = document.getElementById('body');
+var textObj;
 
 var css_object = {
     ID: 'animatedText-CSS',
@@ -53,6 +57,9 @@ var js_object = {
     yVel: 0,
 }
 
+initPosition(css_object);
+initPosition(html_object);
+initPosition(js_object);
 
 setVelocity(css_object);
 setVelocity(html_object);
@@ -64,15 +71,15 @@ setInterval(update.bind(null, html_object), 1000 / FPS);
 setInterval(update.bind(null, js_object), 1000 / FPS);
 
 // starting position
-xCSS = bodyObj.clientWidth / 2;
-yCSS = 100; //bodyObj.clientHeight / 2;
+xCSS = bodyObjWebEl.clientWidth / 2;
+yCSS = 100; //bodyObjWebEl.clientHeight / 2;
 
-xHTML = bodyObj.clientWidth / 2;
-yHTML = 100; //bodyObj.clientHeight / 2;
+xHTML = bodyObjWebEl.clientWidth / 2;
+yHTML = 100; //bodyObjWebEl.clientHeight / 2;
 
 // update function
 function update(textObj) {
-    //bodyObj = document.getElementById('body');
+    bodyObjWebEl = document.getElementById('body');
     //textObj = document.getElementById(textObjID);
     var elementRect = textObj.webElement.getBoundingClientRect();
 
@@ -85,27 +92,20 @@ function update(textObj) {
     y += textObj.yVel;
 
     // bounce off screen edge
+    // p.s + & - int's here are just my tweaks for better looks
     if (x < 0 && textObj.xVel < 0) {
         textObj.xVel = -textObj.xVel;
         x += textObj.xVel;
     }
-    //if (x > bodyObj.clientWidth && textObj.xVel > 0) {
-    //    textObj.xVel = -textObj.xVel;
-    //    x += textObj.xVel;
-    //}
-    if ((x + elementRect.width) > window.innerWidth && textObj.xVel > 0) {
+    if ((x + elementRect.width + 10) > window.innerWidth && textObj.xVel > 0) {
         textObj.xVel = -textObj.xVel;
         x += textObj.xVel;
     }
-    if (y < 0 && textObj.yVel < 0) {
+    if (y < -10 && textObj.yVel < 0) {
         textObj.yVel = -textObj.yVel;
         y += textObj.yVel;
     }
-    //if (y > bodyObj.clientHeight && textObj.yVel > 0) {
-    //    textObj.yVel = -textObj.yVel;
-    //    y += textObj.yVel;
-    //}
-    if ((y + elementRect.height) > window.innerHeight && textObj.yVel > 0) {
+    if ((y + elementRect.height - 12) > window.innerHeight && textObj.yVel > 0) {
         textObj.yVel = -textObj.yVel;
         y += textObj.yVel;
     }
