@@ -151,11 +151,18 @@ p {
 }
 
 .project-card {
-    width: 800px;
-    height: 815px;
+    width: 550px;
     box-shadow: 5px 5px 20px #2596be;
-    padding: 5px;
+    background-color: #dedede;
+    padding: 25px;
     margin: 15px;
+    border-radius: 15px;
+    transition: all .7s ease-out;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    transition: all .7s ease-in-out;
 }
 
 .project-container {
@@ -178,12 +185,20 @@ p {
     border-width: 10px;
     border-color: #2596be;
     border-style: inset;
+    border-radius: 15px;
     /* border-radius: 152px; */
+}
+
+.project-description-subtext {
+    padding: 5px;
+    font-size: 15px;
+    text-align: left;
 }
 
 .project-link {
     text-decoration: none;
-    color: #be4d25;
+    color: #2596be;
+    display: block;
 }
 
 hr {
